@@ -10,6 +10,11 @@
         description = "A very basic flake";
       };
 
+      devshell = {
+        path = ./devshell;
+        description = "A very basic flake with a devshell";
+      };
+
       simpleContainer = {
         path = ./simple-container;
         description = "A NixOS container running apache-httpd";
@@ -17,7 +22,7 @@
 
     };
 
-    defaultTemplate = self.templates.trivial;
+    defaultTemplate = self.templates.devshell;
 
   };
 }
